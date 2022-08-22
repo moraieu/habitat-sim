@@ -30,7 +30,7 @@ ln -s "/usr/local/lib/python${PYTHON_VERSION}/dist-packages" "/usr/local/lib/pyt
 ##Install numba and llmvlite separately
 conda config --set pip_interop_enabled True
 conda install -S -y --prefix /usr/local -c numba numba
-conda install -S -y --prefix /usr/local -c conda-forge llmvlite
+conda install -S -y --prefix /usr/local -c conda-forge llvmlite
 
 ##Install Habitat-Sim and Magnum binaries
 NIGHTLY="${NIGHTLY:-false}" #setting the ENV $NIGHTLY to true will install the nightly version from conda
