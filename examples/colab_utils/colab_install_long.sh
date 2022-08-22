@@ -27,9 +27,9 @@ wget -c https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh &&
 #Adds the conda libraries directly to the colab path.
 ln -s "/usr/local/lib/python${PYTHON_VERSION}/dist-packages" "/usr/local/lib/python${PYTHON_VERSION}/site-packages"
 
-##Install numba separately
+##Install numba and llmvlite separately
 conda config --set pip_interop_enabled True
-conda install -S -y --prefix /usr/local -c numba numba
+conda install -S -y --prefix /usr/local -c numba numba llmvlite
 
 ##Install Habitat-Sim and Magnum binaries
 NIGHTLY="${NIGHTLY:-false}" #setting the ENV $NIGHTLY to true will install the nightly version from conda
